@@ -13,7 +13,8 @@ import org.springframework.stereotype.Repository;
  * @author asus
  */
 @Repository
-public interface PengembalianRepository extends JpaRepository<Pengembalian, Long> {
+public interface PengembalianRepository extends JpaRepository<Pengembalian, Long>{
 
     public Pengembalian findByPengembalianId(Long pengembalianId);
+    
 }

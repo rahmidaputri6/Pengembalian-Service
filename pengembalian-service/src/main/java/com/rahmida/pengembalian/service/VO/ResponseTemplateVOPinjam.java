@@ -15,11 +15,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Peminjaman {
-
-     private Long peminjamanId;
-    private Long anggotaId;
-    private Long bukuId;
-    private String tglpinjam;
-    private String tglkembali;
+public class ResponseTemplateVOPinjam {
+     private Peminjaman peminjaman;
+    private Anggota anggota;
+    private Buku buku;
 }

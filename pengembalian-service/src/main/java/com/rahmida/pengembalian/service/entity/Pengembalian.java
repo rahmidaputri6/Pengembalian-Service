@@ -5,6 +5,9 @@
 package com.rahmida.pengembalian.service.entity;
 
 import com.rahmida.pengembalian.service.VO.Peminjaman;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,68 +18,16 @@ import lombok.NoArgsConstructor;
  * @author asus
  */
 //@Entity
+@Entity
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-
+@NoArgsConstructor
 public class Pengembalian {
-
-    Peminjaman Peminjaman;
-
-    @Id
-//    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long PengembalianId;
-    private Long PeminjamanId;
-    private String tglpengembalian;
-    private Integer terlambat;
-    private Double denda;
-
-    public Pengembalian(Long PengembalianId, Long PeminjamanId, String tglpengembalian, Integer terlambat, Double denda) {
-        this.PengembalianId = PengembalianId;
-        this.PeminjamanId = PeminjamanId;
-        this.tglpengembalian = tglpengembalian;
-        this.terlambat = terlambat;
-        this.denda = denda;
-    }
-
-    public void setPengembalianId(Long PengembalianId) {
-        this.PengembalianId = PengembalianId;
-    }
-
-    public Long getPengembalianId() {
-        return PengembalianId;
-    }
-
-    public Long getPeminjamanId() {
-        return PeminjamanId;
-    }
-
-    public void setPeminjamanId(Long peminjamanId) {
-        this.PeminjamanId = peminjamanId;
-    }
-
-    public void setTglPengembalian(String tglpengembalian) {
-        this.tglpengembalian = tglpengembalian;
-    }
-
-    public String getTglPengembalian() {
-        return tglpengembalian;
-    }
-
-    public double getTerlambat() {
-        return terlambat;
-    }
-
-    public void setTerlambat(Integer terlambat) {
-        this.terlambat = terlambat;
-    }
-
-    public double getDenda() {
-        denda = terlambat * 1000.0;
-        return denda;
-    }
-
-    public void setDenda(double denda) {
-        this.denda = denda;
-    }
+     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long pengembalianId;
+    private Long peminjamanId;
+    private String tglDikembalikan;
+    private int terlambat;
+    private double denda;
 }

@@ -4,6 +4,7 @@
  */
 package com.rahmida.pengembalian.service.VO;
 
+import com.rahmida.pengembalian.service.entity.Pengembalian;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,11 +16,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Peminjaman {
+public class ResponseTemplateVO {
 
-     private Long peminjamanId;
-    private Long anggotaId;
-    private Long bukuId;
-    private String tglpinjam;
-    private String tglkembali;
+  private Pengembalian pengembalian;
+    private Peminjaman peminjaman;
 }

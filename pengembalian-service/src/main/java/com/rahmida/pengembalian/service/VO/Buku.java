@@ -13,13 +13,13 @@ import lombok.NoArgsConstructor;
  * @author asus
  */
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class Peminjaman {
-
-     private Long peminjamanId;
-    private Long anggotaId;
-    private Long bukuId;
-    private String tglpinjam;
-    private String tglkembali;
+@NoArgsConstructor
+public class Buku {
+      private Long bukuId;
+    private String kode;
+    private String judul;
+    private String pengarang;
+    private String penerbit;
+    private int tahunTerbit;
 }
